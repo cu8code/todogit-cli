@@ -19,7 +19,6 @@ The newly created Github issues will have a title and description that matches y
 - Conversion of TODOs into Github issues
 - Customizable issue titles and descriptions
 - Integration with Github API for seamless issue creation
-- Support for multiple Github repositories
 
 ## Authentication
 gittodoman uses Github API to create issues, so you will need to authenticate your Github account before using the app. The authentication process is secure and requires your Github credentials
