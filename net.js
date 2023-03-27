@@ -1,4 +1,4 @@
-const { sleep } = require("./util.js")
+const { delay } = require("./util.js")
 
 const CLIENT_ID = "afc775ea851677813e35"
 
@@ -45,6 +45,7 @@ async function extract_vefication_code(response_json) {
 
   const start = new Date()
   while (true) {
+
     // if expires break
     if ((new Date() - start) > (expires_in * 1000)) {
       console.error("failed: session expired")
@@ -67,23 +68,40 @@ async function extract_vefication_code(response_json) {
       body: text,
     };
 
-    const result = await fetch(uri, requestOptions)
+    const result = await fetch("https://github.com/login/oauth/access_token", requestOptions)
+    const t = await result.text()
+    const data = JSON.parse(t)
+    console.log(data);
 
-    console.log('====================================');
-    console.log({result});
-    console.log('====================================');
-
-    if (result.data?.access_token) {
-      return result.data.access_token
+    if (data?.access_token) {
+      return data.access_token
     }
 
-    await sleep(interval * 1000)
+    await delay(interval * 1000)
   }
 }
 
 
-async function create_issue(title,body,token){
+async function create_issue(title, token, url) {
+  const headers = new Headers()
+  headers.append('Accept', "application/vnd.github+json")
+  headers.append('Authorization', 'Bearer ' + token)
+  headers.append('X-GitHub-Api-Version', '2022-11-28')
+  headers.append('Content-Type', 'text/plain')
 
+  const raw = JSON.stringify({
+    title
+  });
+
+  const requestOptions = {
+    method: 'POST',
+    headers: headers,
+    body: raw,
+  };
+
+  const r = await fetch(url, requestOptions)
+  const t = await r.text()
+  console.log(t);
 }
 
 module.exports = {

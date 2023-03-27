@@ -1,7 +1,8 @@
-async function sleep(ms) {
-  await new Promise(ms => setTimeout(ms))
+function delay(time) {
+  return new Promise(resolve => setTimeout(resolve, time));
 }
 
+
 module.exports = {
-  sleep
+  delay
 }
