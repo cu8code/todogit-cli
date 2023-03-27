@@ -11,11 +11,11 @@
     "url": "git+https://github.com/cu8code/gittodoman.git"
   },
   "bin": {
-    "gittodoman": "bin/gittodoman.bundel.js"
+    "gittodoman": "bin/gittodoman.bundle.js"
   },
   "keywords": [],
   "author": "cu8code",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/cu8code/gittodoman/issues"
   },
