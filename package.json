@@ -1,0 +1,28 @@
+{
+  "name": "gittodoman",
+  "version": "0.0.1",
+  "description": "",
+  "main": "bin/gittodoman.bundle.js",
+  "scripts": {
+    "test": "webpack --config webpack.config.js && sed -i '1i #! /usr/bin/env node' bin/gittodoman.bundle.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cu8code/gittodoman.git"
+  },
+  "bin": {
+    "gittodoman": "bin/gittodoman.bundel.js"
+  },
+  "keywords": [],
+  "author": "cu8code",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cu8code/gittodoman/issues"
+  },
+  "homepage": "https://github.com/cu8code/gittodoman#readme",
+  "dependencies": {
+    "debug": "^4.3.4",
+    "webpack": "^5.76.3",
+    "webpack-cli": "^5.0.1"
+  }
+}
