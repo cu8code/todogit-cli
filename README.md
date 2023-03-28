@@ -7,7 +7,7 @@ todoman is a simple command-line interface (CLI) app that helps developers conve
 
 ## Usage
 
-`scripts [http-link-of-git-repo]`
+`todoman [http-link-of-git-repo]`
 
 run the script in your git repo
 
