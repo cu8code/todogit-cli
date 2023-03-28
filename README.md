@@ -3,7 +3,7 @@
 todoman is a simple command-line interface (CLI) app that helps developers convert their project TODOs into Github issues. With todoman, you can easily keep track of your project tasks and bugs, and turn them into actionable Github issues.
 
 ## Installation
-`curl https://raw.githubusercontent.com/cu8code/gittodoman/main/bin/gittodoman.bundle.js > scripts && chmod +x scripts`
+`curl https://raw.githubusercontent.com/cu8code/gittodoman/main/bin/gittodoman.bundle.js > todoman && chmod +x todoman`
 
 ## Usage
 
