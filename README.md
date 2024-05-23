@@ -1,4 +1,4 @@
-# gittodoman - Convert Project TODOs into Github Issues
+#  todogit-cli  - Convert Project TODOs into Github Issues
 
 todoman is a simple command-line interface (CLI) app that helps developers convert their project TODOs into Github issues. With todoman, you can easily keep track of your project tasks and bugs, and turn them into actionable Github issues.
 
